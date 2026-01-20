@@ -104,13 +104,29 @@ export default function Home() {
                 style={{ opacity: 0, animationFillMode: 'forwards' }}
               >
                 {/* Preview Container */}
-                <div className="preview-container relative">
-                  <iframe
-                    src={project.url}
-                    title={project.name}
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin"
-                  />
+                <div className="preview-container relative bg-gradient-to-br from-[#0a0a0a] via-[#111] to-[#1a1a1a] flex items-center justify-center">
+                  {/* Animated Grid Background */}
+                  <div className="absolute inset-0 opacity-20">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: `linear-gradient(rgba(57, 255, 20, 0.1) 1px, transparent 1px),
+                                        linear-gradient(90deg, rgba(57, 255, 20, 0.1) 1px, transparent 1px)`,
+                      backgroundSize: '20px 20px'
+                    }} />
+                  </div>
+
+                  {/* Center Icon */}
+                  <div className="z-10 flex flex-col items-center gap-3">
+                    <div className="w-16 h-16 rounded-xl bg-[#39FF14]/10 border border-[#39FF14]/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#39FF14]/20 transition-all duration-300">
+                      <svg className="w-8 h-8 text-[#39FF14]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                      </svg>
+                    </div>
+                    <span className="text-[#39FF14]/60 text-xs font-medium tracking-wider uppercase">Live Preview</span>
+                  </div>
+
+                  {/* Glow Effect */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-[#39FF14]/5 rounded-full blur-3xl group-hover:w-48 group-hover:h-48 transition-all duration-500" />
+
                   <div className="preview-overlay" />
 
                   {/* Category Badge */}

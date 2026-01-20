@@ -1,4 +1,4 @@
-# MI2B PBL Landing Page
+https://github.com/qifor27/MI2B_area# MI2B PBL Landing Page
 
 Landing page futuristik untuk showcase Project Based Learning kelas MI2B - Politeknik Negeri Padang.
 
